@@ -1,0 +1,22 @@
+{
+  "name": "sonartest1",
+  "version": "1.0.0",
+  "description": "Sample JavaScript app for Jenkins + Maven + SonarQube + Docker",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "testEnvironment": "node"
+  }
+}
