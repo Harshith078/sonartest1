@@ -19,6 +19,13 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Install Node') {
+            steps {
+                sh '''
+                which node || (apt update && apt install -y nodejs npm)
+                '''
+             }
+         }
 
         stage('Build and Test with Maven') {
             steps {
